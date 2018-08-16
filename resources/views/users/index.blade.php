@@ -24,7 +24,15 @@
 		<td></td>
 		<td colspan="2">{{link_to_route('users.create', $title = 'crear', $parameters = [], $attributes = ['class' => 'btn btn-success']) }}
 		</td>
+		<tr>
+		<th>Lista de Usuarios Borrados</th>
+		<td></td>
+		<td colspan="2">{{link_to_route('users.borrados', $title = 'Ver', $parameters = [], $attributes = ['class' => 'btn btn-info']) }}
+		</td>
+		</tr>
 			
 	</table>
+
+	{{ $users->links() }}
 
 @stop()

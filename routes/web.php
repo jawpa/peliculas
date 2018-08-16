@@ -44,3 +44,5 @@ Auth::routes();
 Route::resource('movies', 'MovieController');
 
 Route::resource('users', 'UserController');
+Route::get('usuarios_borrados', 'UserController@usuariosBorrados')->name('users.borrados');
+Route::get('usuario_restablecer/{user}', 'UserController@usuarioRestablecer')->name('users.restablecer');

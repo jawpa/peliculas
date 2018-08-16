@@ -16,8 +16,23 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::paginate(10);
         return view('users.index',compact('users'));
+    }
+
+
+    public function usuariosBorrados()
+    {
+        $users = User::onlyTrashed()->paginate(10);
+        return view('users.borrados',compact('users'));
+
+    }
+
+    public function usuarioRestablecer($id)
+    {
+        User::withTrashed()->find($id)->restore();
+        return redirect('/users')->with('status','Usuario Restablecido');  
+
     }
 
     /**
@@ -97,7 +112,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        User::destroy($id);
+        $user = User::find($id);
+        $user->delete();
         return redirect('/users')->with('status','Usuario Borrado');
     }
 }

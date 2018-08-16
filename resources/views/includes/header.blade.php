@@ -24,7 +24,7 @@
     <div class="row">
       <div class="col-sm-8 col-md-7 py-4">
         <h4 class="text-white">Sobre Nosotros</h4>
-        <p class="text-muted">Te ofrecemos un catálogo muy completo con las mejores películas realizadas en el todo el planeta</p>
+        <p class="text-muted">Te ofrecemos un catálogo muy completo con las mejores películas realizadas en todo el planeta</p>
       </div>
       <div class="col-sm-4 offset-md-1 py-4">
         <h4 class="text-white">Contactate</h4>

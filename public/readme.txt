@@ -21,3 +21,9 @@ seteamos el password en el modelo, para encriptar la contraseña
 creamos request para crear y para actualizar
 
 ingresamos las reglas para que sean validados
+
+sideamos datos
+
+paginamos
+
+softdeleting
